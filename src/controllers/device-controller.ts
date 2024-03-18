@@ -69,7 +69,7 @@ export class DeviceController extends BaseController {
             driver_id: req.body.driver_id,
           }).then(() => {
             this.app.devicesCache = null;
-            this.app.ws.sendToAll('notify', {system: true, type: 'device-create'});
+            // this.app.ws.sendToAll('notify', {system: true, type: 'device-create'});
             this.getDevices(req, res, data);
           });
         }).catch(error => {
