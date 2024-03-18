@@ -12,3 +12,11 @@ export function checkTimeoutEx(item, ident, method, timeout = 1000, force = fals
     }, timeout - (new Date().getTime() - item[ident]));
   }
 }
+
+export function removeLast(data, chr = '\n') {
+  let result = data;
+  if (data && data[data.length - 1] === chr) {
+    result = data.substring(0, data.length - 1);
+  }
+  return result
+}

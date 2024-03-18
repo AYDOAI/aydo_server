@@ -13,6 +13,7 @@ export const Database = toMixin(base => class Database extends base {
     devices: {id: 1, items: []},
     drivers: {id: 1, items: []},
     users: {id: 1, items: []},
+    zones: {id: 1, items: []},
   };
 
   load(options: AppOptions) {

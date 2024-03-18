@@ -8,8 +8,8 @@ import {RestApi} from './mixins/rest-api';
 import {Emitter} from './mixins/emitter';
 import {Drivers} from './mixins/drivers';
 import {Devices} from './mixins/devices';
+import {IPC} from './mixins/ipc';
 import {Controllers} from './controllers';
-import {EventTypes} from './models/event-types';
 
 const Base = toExtendable(class BaseClass {
 
@@ -36,7 +36,7 @@ export interface AppOptions {
   configPath: string;
 }
 
-export class App extends Base.with(Config, Database, Emitter, Log, RestApi, Drivers, Devices) {
+export class App extends Base.with(Config, Database, Emitter, Log, RestApi, Drivers, Devices, IPC) {
   version = '3.0.0';
   requireEx: RequireEx;
 
